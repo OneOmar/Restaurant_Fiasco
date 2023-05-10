@@ -43,17 +43,18 @@ img {
 
 .logo {
     margin-bottom: 20px;
+    white-space: nowrap;
 }
 
 .menu-item {
     display: inline-block;
-    margin: 0 20px;
+    margin: 6px 20px;
+    white-space: nowrap;
 }
 
 .menu-button {
     border: solid 1px #C89446;
     padding: 7px 12px;
-    margin-top: 10px;
     transition: .4s;
 }
 
@@ -222,6 +223,76 @@ img {
     padding: 5px;
 }
 
+.block-chef .block-img {
+    /* width: 100%; */
+    border: none;
+}
+
+.reservation {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5) 39.24%, rgba(28, 28, 28, 0.4)),
+    url(img/reservation.jpg) center center / cover no-repeat;
+    color: rgba(255, 255, 255, .7);
+    padding: 80px 15px;
+}
+
+.reservation .block {
+    margin-bottom: 0;
+}
+
+.reservation .title {
+    color: #FFF;
+}
+
+.reservation input, .reservation select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: solid 1px #6F6F6F;
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFF;
+    font-family: 'Source Sans Pro', serif;
+    transition: .3s;
+}
+
+.reservation input:focus, .reservation select:focus {
+    background-color: rgba(255, 255, 255, .08);
+    border-color: #C89446;
+}
+
+.reservation select {
+    appearance: none;
+    background: no-repeat right 10px center url(img/select.svg);
+}
+
+.reservation select option {
+    color: #000;
+}
+
+.reservation button {
+    width: 100%;
+    font-family: 'Source Sans Pro', serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #C89446;
+    color: #FFF;
+    border: solid 2px transparent;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.reservation button:hover {
+    background: transparent;
+    color: #C89446;
+    border: solid 2px #C89446;
+}
+
+
 @media only screen and (min-width: 760px) {
     body {
         font-size: 16px;
@@ -243,9 +314,6 @@ img {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .menu-button {
-        margin-top: 0;
     }
     .slogan {
         padding: 112px 0 227px;
@@ -311,12 +379,21 @@ img {
         left: auto;
         right: -30px;
     }
+    .block-chef .block-img {
+        width: 100%;
+        flex: none;
+        order: 2;
+    }
+    .block-chef .block-img::before {
+        display: none;
+    }
     .menu-summary {
         position: relative;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 30px;
     }
     .menu-summary::before {
         content: '';
@@ -367,4 +444,29 @@ img {
         background: fixed top 95px right 0 url(img/oranges.jpg) no-repeat,
                     fixed top 580px left 0 url(img/spices.jpg) no-repeat;
     }
+    .reservation .block {
+        justify-content: center;
+    }
+    .reservation .block-body {
+        width: 900px;
+    }
+    .reservation p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 640px;
+    }
+    .reservation .form-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .reservation input, .reservation select {
+        margin: 0 20px;
+        width: 33%;
+    }
+    .reservation button {
+        margin-top: 60px;
+        width: calc(33% - 40px);
+    } 
 }
