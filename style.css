@@ -353,6 +353,56 @@ img {
     height: 450px;
 } */
 
+.footer {
+    background: bottom right no-repeat #383838;
+    font-weight: 300;
+    color: #FFF;
+    padding: 40px 20px;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-column {
+    margin-bottom: 20px;
+}
+.footer-column:last-child {
+    margin-bottom: 0;
+}
+
+.footer-title {
+    color: #C89446;
+    font-weight: bold;
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer a:hover {
+    color: #C89446;
+    text-decoration: underline;
+}
+
+.footer-credits {
+    margin-top: 40px;
+}
+
+.footer-credits span {
+    font-weight: bold;
+}
+
 @media only screen and (min-width: 760px) {
     body {
         font-size: 16px;
@@ -531,5 +581,25 @@ img {
     } 
     .recipes-date {
         width: 90px;
+    }
+    .footer {
+        background-image: url(img/splash-colored.png);
+    }
+    .footer-columns {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-column {
+        margin-right: 20px;
+    }
+    .footer-column:first-child {
+        max-width: 450px;
+    }
+    
+    .footer-column:last-child {
+        flex: none;
+        width: 290px;
+        margin-right: 0;
+        margin-bottom: 0;
     }
 }
