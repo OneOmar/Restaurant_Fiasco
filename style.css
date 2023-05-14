@@ -29,6 +29,13 @@ img {
     color: #FFF;
 }
 
+/* START: css for page: recipe1 */
+.recipe1-header {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5) 39.24%, rgba(28, 28, 28, 0.4)),
+    url(img/salad-chicken.jpg) center center / cover no-repeat;
+}
+/* FIN: css for page: recipe1 */
+
 .topbar {
     padding: 18px 20px;
     /* font-size: 14px; */
@@ -403,6 +410,79 @@ img {
     font-weight: bold;
 }
 
+.block-ingredients {
+    border: solid 1px #C89446;
+    padding: 35px;
+    font-weight: 600;
+    color: #383838;
+}
+
+.block-ingredients ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.block-ingredients li {
+    padding: 12px 0;
+}
+
+.block-ingredients span {
+    width: 35px;
+    display: inline-block;
+    text-align: left;
+    margin-right: 20px;
+    font-weight: 300;
+}
+
+.block-video {
+    display: block;
+    position: relative;
+    max-width: 540px;
+    background: #383838;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block-video img {
+    display: block;
+    opacity: .5;
+    transition: .3s;
+}
+
+.block-video::after {
+    position: absolute;
+    display: block;
+    content: '';
+    background: url(img/circle-right.png) center center no-repeat;
+    width: 62px;
+    height: 62px;
+    top: calc(50% - 31px);
+    left: calc(50% - 31px);
+    /* transform: translate(-50%, -50%); */
+    transition: .3s;
+}
+
+.block-video:hover::after {
+    transform: scale(1.1);
+}
+
+.block-video:hover img {
+    opacity: .8;
+}
+
+.recipes-summary {
+    padding: 60px 0;
+    text-align: center;
+}
+
+    /* START: css for page: recipe1 */
+    .recipes-summary .menu-summary-item {
+        margin-bottom: 40px;
+    }
+    /* FIN:  css for page: recipe1 */
+
 @media only screen and (min-width: 760px) {
     body {
         font-size: 16px;
@@ -601,5 +681,16 @@ img {
         width: 290px;
         margin-right: 0;
         margin-bottom: 0;
+    }
+
+    /* recipe1 page */
+    .recipes-summary {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .recipes-summary .menu-summary-item {
+        margin-bottom: 40px;
     }
 }
